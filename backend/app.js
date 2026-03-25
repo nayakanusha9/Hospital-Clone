@@ -159,4 +159,3 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`🏥 Hospital Management System running on http://localhost:${PORT}`);
 });
-
