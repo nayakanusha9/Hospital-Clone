@@ -13,14 +13,14 @@ spec:
         app: hospital
     spec:
       containers:
-      - name: hospital-container
-        image: {{ .Values.image.repository }}: {{ .Values.image.tag }}
-        ports:
-        - containerPort: 5000
+        - name: hospital-container
+          image: {{ .Values.image.repository }}: {{ .Values.image.tag }}
+          ports:
+            - containerPort: 5000
 
         # 🔹 ConfigMap + Secret (NO hardcoding)
-        envFrom:
-          - configMapRef:
-              name: hospital-config
-          - secretRef:
-              name: hospital-secret
+          envFrom:
+            - configMapRef:
+                name: hospital-config
+            - secretRef:
+                name: hospital-secret
