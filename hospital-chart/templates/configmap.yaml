@@ -3,7 +3,5 @@ kind: ConfigMap
 metadata:
   name: hospital-config
 data:
-  env:
-    - name: ADMIN_USERNAME
-      value: "{{ .Values.config.ADMIN_USERNAME }}"
-      MONGO_URI: {{ .Values.config.MONGO_URI }}
+  ADMIN_USERNAME: "{{ .Values.config.ADMIN_USERNAME }}"
+  MONGO_URI: "{{ .Values.config.MONGO_URI }}"
