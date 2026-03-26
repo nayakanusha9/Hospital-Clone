@@ -6,8 +6,8 @@ pipeline {
     }
 
     environment {
-        DOCKERHUB_USER = "anushanayak091"          
-        IMAGE_NAME = "hospital-app"               
+        DOCKERHUB_USER = "anushanayak091"         
+        IMAGE_NAME = "hospital"               
         DOCKER_CREDS = "docker_creds"
     }
 
@@ -16,7 +16,7 @@ pipeline {
         stage('Clone') {
             steps {
                 echo "Cloning the GitHub Repository"
-                git url: 'https://github.com/nayakanusha9/Hospital-Clone.git', branch: 'master'
+                git url: 'https://github.com/nayakanusha9/Hospital-Clone.git', branch: 'main'
             }
         }
 
@@ -77,10 +77,10 @@ pipeline {
 
     post {
         success {
-            echo "CI Pipeline SUCCESS - Image pushed successfully!"
+            echo "✅ CI Pipeline SUCCESS - Image pushed successfully!"
         }
         failure {
-            echo "CI Pipeline FAILED"
+            echo "❌ CI Pipeline FAILED"
         }
     }
 }
