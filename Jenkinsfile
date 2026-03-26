@@ -72,7 +72,7 @@ pipeline {
                 docker rm hospital-container || true
                 docker run -d \
                 --name hospital-container \
-                -p 5000:80 \
+                -p 5000:5000 \
                 ${DOCKERHUB_USER}/${IMAGE_NAME}:${VERSION}
                 """
             }
