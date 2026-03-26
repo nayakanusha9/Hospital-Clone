@@ -7,7 +7,7 @@ pipeline {
 
     environment {
         DOCKERHUB_USER = "anushanayak091"          
-        IMAGE_NAME = "hospital-app"               
+        IMAGE_NAME = "hospital-app:v1.0.0"               
         DOCKER_CREDS = "docker_creds"
     }
 
@@ -16,7 +16,7 @@ pipeline {
         stage('Clone') {
             steps {
                 echo "Cloning the GitHub Repository"
-                git url: 'https://github.com/Msocial123/Hospital-Application.git', branch: 'master'
+                git url: 'https://github.com/nayakanusha9/Hospital-Clone.git', branch: 'master'
             }
         }
 
