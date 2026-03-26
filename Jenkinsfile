@@ -7,7 +7,7 @@ pipeline {
 
     environment {
         DOCKERHUB_USER = "anushanayak091"          
-        IMAGE_NAME = "hospital-app:v1.0.0"               
+        IMAGE_NAME = "hospital-app"               
         DOCKER_CREDS = "docker_creds"
     }
 
