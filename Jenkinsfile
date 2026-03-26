@@ -64,6 +64,20 @@ pipeline {
             }
         }
 
+        stage('Run Container') {   // 👈 ADD HERE
+            steps {
+                echo "Running Docker Container..."
+                sh """
+                docker stop hospital-container || true
+                docker rm hospital-container || true
+                docker run -d \
+                --name hospital-container \
+                -p 5000:80 \
+                ${DOCKERHUB_USER}/${IMAGE_NAME}:${VERSION}
+                """
+            }
+        }
+
         stage('Cleanup') {
             steps {
                 echo "Cleaning up local images..."
