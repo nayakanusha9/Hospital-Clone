@@ -16,6 +16,3 @@ secret:
   ADMIN_PASSWORD: 10@AdminPW
   SESSION_SECRET: yourSuperSecretSessionKey
   JWT_SECRET: yourSuperSecretJWTKey123456789
-
-pvc:
-  storage: 1Gi

@@ -24,14 +24,3 @@ spec:
               name: hospital-config
           - secretRef:
               name: hospital-secret
-
-        # 🔹 Persistent Storage
-        volumeMounts:
-          - name: storage
-            mountPath: /app/data
-
-      # 🔹 PVC connection
-      volumes:
-        - name: storage
-          persistentVolumeClaim:
-            claimName: hospital-pvc
