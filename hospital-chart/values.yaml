@@ -1,0 +1,21 @@
+replicaCount: 2
+
+image:
+  repository: anushanayak091/hospital-app
+  tag: v1.0.0
+
+service:
+  port: 80
+  targetPort: 5000
+
+config:
+  ADMIN_USERNAME: admin
+  MONGO_URI: mongodb://mongo:27017/hospital_management
+
+secret:
+  ADMIN_PASSWORD: 10@AdminPW
+  SESSION_SECRET: yourSuperSecretSessionKey
+  JWT_SECRET: yourSuperSecretJWTKey123456789
+
+pvc:
+  storage: 1Gi

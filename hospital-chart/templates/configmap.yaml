@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hospital-config
+data:
+  ADMIN_USERNAME: {{ .Values.config.ADMIN_USERNAME }}
+  MONGO_URI: {{ .Values.config.MONGO_URI }}

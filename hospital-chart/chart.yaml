@@ -1,0 +1,4 @@
+apiVersion: v2
+name: hospital-chart
+version: 0.1.0
+description: Simple Helm chart for hospital app
