@@ -64,7 +64,7 @@ pipeline {
             }
         }
 
-        stage('Run Container') {   // 👈 ADD HERE
+        stage('Run Container') {   
             steps {
                 echo "Running Docker Container..."
                 sh """
@@ -91,10 +91,10 @@ pipeline {
 
     post {
         success {
-            echo "✅ CI Pipeline SUCCESS - Image pushed successfully!"
+            echo " CI Pipeline SUCCESS - Image pushed successfully!"
         }
         failure {
-            echo "❌ CI Pipeline FAILED"
+            echo " CI Pipeline FAILED"
         }
     }
 }
